@@ -26,7 +26,7 @@
                                 <div class="text-center">
                                     <h4 class="text-dark mb-4">Masuk</h4>
                                 </div>
-                                <form class="user" action="{{url('login/proses')}}" method="post">
+                                <form class="user" action="{{url('auth/proses')}}" method="post">
                                     @csrf
                                     <div class="mb-3"><input class="form-control form-control-user" type="text" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username" name="username"></div>
                                     <div class="mb-3"><input class="form-control form-control-user" type="password" id="exampleInputPassword" placeholder="Kata Sandi" name="password"></div>

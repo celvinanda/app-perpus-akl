@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title> | E-Perpustakaan</title>
+    <title>Table - Literasi</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -13,26 +13,23 @@
 
 <body id="page-top">
 <div id="wrapper">
-    {{--Sidebar--}}
-
-    @include('layout.menu')
     <div class="d-flex flex-column" id="content-wrapper">
         <div id="content">
             <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
                 <div class="container-fluid">
-                    @if($user->level!=3 ||$user->level!=4)
-                        <button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button">
-                            <i class="fas fa-bars"></i></button>
-                    @endif
-                    {{--                    <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">--}}
-                    {{--                        <div class="input-group"><input class="bg-light form-control border-0 small" type="text"--}}
-                    {{--                                                        placeholder="Pencarian ...">--}}
-                    {{--                            <button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button>--}}
-                    {{--                        </div>--}}
-                    {{--                    </form>--}}
+                    <button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i
+                            class="fas fa-bars"></i></button>
+                    <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group"><input class="bg-light form-control border-0 small" type="text"
+                                                        placeholder="Search for ...">
+                            <button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button>
+                        </div>
+                    </form>
                     <ul class="navbar-nav flex-nowrap ms-auto">
-                        <li class="nav-item dropdown d-sm-none no-arrow">
-                            {{--                            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><i class="fas fa-search"></i></a>--}}
+                        <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link"
+                                                                            aria-expanded="false"
+                                                                            data-bs-toggle="dropdown" href="#"><i
+                                    class="fas fa-search"></i></a>
                             <div class="dropdown-menu dropdown-menu-end p-3 animated--grow-in"
                                  aria-labelledby="searchDropdown">
                                 <form class="me-auto navbar-search w-100">
@@ -46,7 +43,7 @@
                                 </form>
                             </div>
                         </li>
-                        <li class="nav-item visually-hidden dropdown no-arrow mx-1">
+                        <li class="nav-item dropdown no-arrow mx-1">
                             <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
                                                                        aria-expanded="false" data-bs-toggle="dropdown"
                                                                        href="#"><span
@@ -83,7 +80,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="nav-item visually-hidden dropdown no-arrow mx-1">
+                        <li class="nav-item dropdown no-arrow mx-1">
                             <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
                                                                        aria-expanded="false" data-bs-toggle="dropdown"
                                                                        href="#"><span
@@ -140,37 +137,135 @@
                         </li>
                         <div class="d-none d-sm-block topbar-divider"></div>
                         <li class="nav-item dropdown no-arrow">
-                            <div class="nav-item dropdown no-arrow"><a aria-expanded="false" data-bs-toggle="dropdown"
-                                                                       class="nav-link" href="#"><span
-                                        class="d-inline d-sm-none d-lg-inline me-2 text-gray-600 small">{{$user->name}}</span><img
+                            <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
+                                                                       aria-expanded="false" data-bs-toggle="dropdown"
+                                                                       href="#"><span
+                                        class="d-none d-lg-inline me-2 text-gray-600 small">Valerie Luna</span><img
                                         class="border rounded-circle img-profile" src="assets/img/avatars/avatar1.jpeg"></a>
                                 <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a
                                         class="dropdown-item" href="#"><i
                                             class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a
-                                        class="dropdown-item visually-hidden" href="#"><i
-                                            class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Pengaturan</a>
+                                        class="dropdown-item" href="#"><i
+                                            class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a><a
+                                        class="dropdown-item" href="#"><i
+                                            class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity
+                                        log</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="{{ url('logout') }}"><i
-                                            class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Keluar</a>
+                                    <a class="dropdown-item" href="#"><i
+                                            class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </div>
             </nav>
-
-            @yield('contain-box')
+            <div class="container-fluid">
+                <h3 class="text-dark mb-4">Team</h3>
+                <div class="card shadow">
+                    <div class="card-header py-3">
+                        <p class="text-primary m-0 fw-bold">Employee Info</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 text-nowrap">
+                                <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable"><label
+                                        class="form-label">Data&nbsp;<select
+                                            class="d-inline-block form-select form-select-sm">
+                                            <option value="1" selected="">Semua</option>
+                                            <option value="2">Guru</option>
+                                            <option value="3">Siswa</option>
+                                            <option value="4">Tamu</option>
+                                        </select>&nbsp;</label></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-md-end dataTables_filter" id="dataTable_filter"><label
+                                        class="form-label"><input type="search" class="form-control form-control-sm"
+                                                                  aria-controls="dataTable"
+                                                                  placeholder="Search"></label></div>
+                            </div>
+                        </div>
+                        <div class="table-responsive table mt-2" id="dataTable" role="grid"
+                             aria-describedby="dataTable_info">
+                            <table class="table my-0" id="dataTable">
+                                <thead>
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Status</th>
+                                    <th>Jurusan</th>
+                                    <th>Tahun Ajaran</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @php($showUser = 0)
+                                @foreach($users as $user)
+                                    @if($user->level !=1)
+                                        @php($showUser ++)
+                                        <tr>
+                                            <td>
+                                                {{--<img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">--}}
+                                                {{$user->name}}
+                                            </td>
+                                            @if($user->level ==2)
+                                                <td>Guru</td>
+                                                <td></td>
+                                            @elseif($user->level ==3)
+                                                <td>Siswa</td>
+                                                @if($user->jurusan == 'akn')
+                                                    <td>Akutansi</td>
+                                                @elseif($user->jurusan == 'bdp')
+                                                    <td>Pemasaran</td>
+                                                @elseif($user->jurusan == 'tkj')
+                                                    <td>TKJ</td>
+                                                @elseif($user->jurusan == 'tkr')
+                                                    <td>TKR</td>
+                                                @endif
+                                            @elseif($user->level ==4)
+                                                <td>Tamu</td>
+                                                <td>{{$user->jurusan}}</td>
+                                            @endif
+                                            @if($user->angkatan != 'staf')
+                                                <td>{{$user->angkatan}}</td>
+                                            @endif
+                                        </tr>
+                                    @endif
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 align-self-center">
+                                <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">
+                                    Menampilkan
+                                    {{$showUser}} dari {{count($users)}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                                    <ul class="pagination">
+                                        <li class="page-item disabled"><a class="page-link" href="#"
+                                                                          aria-label="Previous"><span
+                                                    aria-hidden="true">«</span></a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span
+                                                    aria-hidden="true">»</span></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <footer class="bg-white sticky-footer">
             <div class="container my-auto">
-                <div class="text-center my-auto copyright"><span>Copyright © UNISBA '20 - 2023</span></div>
+                <div class="text-center my-auto copyright"><span>Copyright © Literasi 2023</span></div>
             </div>
         </footer>
     </div>
     <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
 </div>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/chart.min.js"></script>
 <script src="assets/js/bs-init.js"></script>
 <script src="assets/js/theme.js"></script>
 </body>

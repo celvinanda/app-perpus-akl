@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('judul')
-    Data Pengunjung
+    Data Pengguna
 @endsection
 
 @section('contain-box')
@@ -11,26 +11,26 @@
 
         </div>
         <div class="card-body">
-            {{--            <div class="row">--}}
-            {{--                <div class="col-md-6 text-nowrap">--}}
-            {{--                    <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable">--}}
-            {{--                        <label class="form-label">Data&nbsp;--}}
-            {{--                            <select class="d-inline-block form-select form-select-sm">--}}
-            {{--                                <option value="1" selected="">Semua</option>--}}
-            {{--                                <option value="2">Guru</option>--}}
-            {{--                                <option value="3">Siswa</option>--}}
-            {{--                                <option value="4">Tamu</option>--}}
-            {{--                            </select>&nbsp;--}}
-            {{--                        </label>--}}
-            {{--                    </div>--}}
-            {{--                </div>--}}
-            {{--                <div class="col-md-6">--}}
-            {{--                    <div class="text-md-end dataTables_filter" id="dataTable_filter"><label--}}
-            {{--                            class="form-label"><input type="search" class="form-control form-control-sm"--}}
-            {{--                                                      aria-controls="dataTable"--}}
-            {{--                                                      placeholder="Search"></label></div>--}}
-            {{--                </div>--}}
-            {{--            </div>--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-md-6 text-nowrap">--}}
+{{--                    <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable">--}}
+{{--                        <label class="form-label">Data&nbsp;--}}
+{{--                            <select class="d-inline-block form-select form-select-sm">--}}
+{{--                                <option value="1" selected="">Semua</option>--}}
+{{--                                <option value="2">Guru</option>--}}
+{{--                                <option value="3">Siswa</option>--}}
+{{--                                <option value="4">Tamu</option>--}}
+{{--                            </select>&nbsp;--}}
+{{--                        </label>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-6">--}}
+{{--                    <div class="text-md-end dataTables_filter" id="dataTable_filter"><label--}}
+{{--                            class="form-label"><input type="search" class="form-control form-control-sm"--}}
+{{--                                                      aria-controls="dataTable"--}}
+{{--                                                      placeholder="Search"></label></div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
             <div class="table-responsive table mt-2" id="dataTable" role="grid"
                  aria-describedby="dataTable_info">
                 <table class="table my-0" id="dataTable">
@@ -101,5 +101,6 @@
                 </div>
             </div>
         </div>
+
     </div>
 @endsection
