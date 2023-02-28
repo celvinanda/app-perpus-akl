@@ -43,6 +43,7 @@ Route::get('/home', [LayoutController::class, 'index'])->middleware('auth');
 Route::controller(LoginController::class)->group(function () {
     Route::post('auth/proses', 'proses');
     Route::get('login', 'index')->name('auth');
+    Route::get('daftar', 'register');
     Route::get('logout', 'logout');
 });
 
